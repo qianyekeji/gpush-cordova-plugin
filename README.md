@@ -7,6 +7,8 @@
 ## 插件介绍
 ###该插件使用个推 SDK 实现了注册远程通知，获取客户注册id，接收远程推送通知消息，实现了本地推送，本地推送立即推送和定时推送，动态设置本地推送消息内容，实现了点击推送通知消息，直接打开App，抓取推送通知消息内容，把通知内容发送到前端。
 ---
+## 效果展示
+![gpush](https://qianyedoufu.com/images/gpush.PNG)
 
 
 ###gpush-cordova-plugin使用方法
@@ -24,7 +26,7 @@
             };
             
         gPushPlugin.startSDK(sendStr,function(data) {
-            console.log('js收到推送消息'+data);
+            console.log('收到客户id'+data);
                                            },
                                         function(fail) {
 
@@ -53,10 +55,7 @@
         function GPushOutputMessage(output){// 原生调用  js传递
         console.log('js收到推送消息'+output);
         }
-        //获取客户注册个推推送ID
-        function GPushGetClientId(output){// 原生调用  js传递
-        console.log('收到客户id'+output);
-        }
+
         
 
     </script>
